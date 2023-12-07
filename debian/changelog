@@ -1,5 +1,106 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-shopify-sarama (1.22.1-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release
+  * golang-go --> golang-any
+  * Standards-Version: 4.4.1
+  * DH to version 12
+  * (Build-)Depends:
+    + golang-github-klauspost-compress-dev
+    + golang-golang-x-net-dev
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 26 Dec 2019 10:02:57 +1100
+
+golang-github-shopify-sarama (1.20.1-2) unstable; urgency=medium
+
+  * Removed "toxiproxy-dev" from (Build-)Depends.
+    (Toxiproxy was removed from "unstable" as per #940453).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Wed, 16 Oct 2019 23:52:31 +1100
+
+golang-github-shopify-sarama (1.20.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Fri, 25 Jan 2019 15:17:30 +0200
+
+golang-github-shopify-sarama (1.20.0-2) unstable; urgency=medium
+
+  * Add missing Depends on golang-github-datadog-zstd-dev (Closes: #918511)
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Wed, 09 Jan 2019 15:08:00 +0200
+
+golang-github-shopify-sarama (1.20.0-1) unstable; urgency=medium
+
+  * Bump Standards-Version, no changes needed
+  * Build depend on golang-github-datadog-zstd-dev (zstandard support)
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Thu, 03 Jan 2019 19:08:47 +0200
+
+golang-github-shopify-sarama (1.19.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Disable consumer group functional tests
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Tue, 09 Oct 2018 16:54:29 +0300
+
+golang-github-shopify-sarama (1.18.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version, no changes needed
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Thu, 20 Sep 2018 15:00:57 +0300
+
+golang-github-shopify-sarama (1.17.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org
+
+  [ Christos Trochalakis ]
+  * New upstream release
+  * Drop all debian patches now included upstream
+  * Bump Standards-Version to 4.1.4, no changes needed
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Mon, 18 Jun 2018 09:35:13 +0300
+
+golang-github-shopify-sarama (1.16.0-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #840627)
+  * Switch to debhelper 11
+  * Standards-Version: 4.1.3
+  * Enable Go autopkgtests
+  * Add myself to Uploaders
+  * Drop alignment patch, merged upstream
+  * Add missing dependencies
+  * Introduce 3 patches fixing broken and flaky tests (Closes: 865798)
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Tue, 13 Mar 2018 14:34:01 +0200
+
+golang-github-shopify-sarama (1.9.0-2) unstable; urgency=medium
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ David Lazăr ]
+  * Add fix-alignment.patch. (Closes: #860705)
+  * Add myself to uploaders.
+
+ -- David Lazăr <dlazar@gmail.com>  Sat, 06 May 2017 16:34:06 +0200
+
+golang-github-shopify-sarama (1.9.0-1) unstable; urgency=medium
+
+  [ Paul Tagliamonte ]
+  * Use a secure transport for the Vcs-Git and Vcs-Browser URL
+
+  [ Dmitry Smirnov ]
+  * New upstream release.
+  * Standards-Version: 3.9.8.
+  * Disabled functional tests due to build-time network access
+    (Closes: #830676).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Thu, 14 Jul 2016 18:53:25 +1000
+
+golang-github-shopify-sarama (1.8.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #818594).
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Fri, 18 Mar 2016 22:50:39 +1100
