@@ -1,0 +1,7 @@
+## Network access during build (#830676):
+functional_test.go
+functional_client_test.go
+functional_offset_manager_test.go
+functional_producer_test.go
+functional_consumer_test.go
+functional_consumer_group_test.go

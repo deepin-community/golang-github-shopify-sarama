@@ -1,15 +1,46 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-shopify-sarama
+Section: devel
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>,
+           Tim Potter <tpot@hpe.com>,
+           David Lazăr <dlazar@gmail.com>,
+           Christos Trochalakis <ctrochalakis@debian.org>,
+Build-Depends: debhelper-compat (= 12),
+               dh-golang,
+               golang-any,
+    golang-github-datadog-zstd-dev,
+    golang-github-davecgh-go-spew-dev,
+    golang-github-eapache-go-xerial-snappy-dev,
+    golang-github-golang-snappy-dev,
+    golang-github-klauspost-compress-dev,
+    golang-github-klauspost-crc32-dev,
+    golang-github-pierrec-lz4-dev,
+    golang-github-rcrowley-go-metrics-dev,
+    golang-golang-x-net-dev,
+    golang-gopkg-eapache-go-resiliency.v1-dev | golang-github-eapache-go-resiliency-dev,
+    golang-gopkg-eapache-queue.v1-dev | golang-github-eapache-queue-dev,
+Standards-Version: 4.4.1
+Homepage: https://github.com/Shopify/sarama
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-shopify-sarama
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-shopify-sarama.git
+XS-Go-Import-Path: github.com/Shopify/sarama
+Testsuite: autopkgtest-pkg-go
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-shopify-sarama-dev
+Architecture: all
+Depends: ${misc:Depends},
+    golang-github-datadog-zstd-dev,
+    golang-github-davecgh-go-spew-dev,
+    golang-github-eapache-go-xerial-snappy-dev,
+    golang-github-golang-snappy-dev,
+    golang-github-klauspost-compress-dev,
+    golang-github-klauspost-crc32-dev,
+    golang-github-pierrec-lz4-dev,
+    golang-github-rcrowley-go-metrics-dev,
+    golang-golang-x-net-dev,
+    golang-gopkg-eapache-go-resiliency.v1-dev | golang-github-eapache-go-resiliency-dev,
+    golang-gopkg-eapache-queue.v1-dev | golang-github-eapache-queue-dev,
+Description: Go library for Apache Kafka
+ Sarama is a Go client library for Apache Kafka (https://kafka.apache.org/)
+ version 0.8 (and later).

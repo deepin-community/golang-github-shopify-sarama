@@ -1,4 +1,6 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_EXCLUDES = examples tools
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang
